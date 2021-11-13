@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Siimple - Bootstrap Landing Page Template</title>
+  <title>Welcome to manavsev</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,7 +38,7 @@
     <div class="container-fluid">
 
       <div class="logo">
-        <h1><a href="index.html">Siimple</a></h1>
+        <h1><a href="index.html">मानव सेवा</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -76,8 +76,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Siimple</h1>
-      <h2>Please, fill out the for below to be notified for the latest updates!</h2>
+      <h1>मानव सेवा में आपका स्वागत है</h1>
+      <h2>कृपया, बुकिंग के लिए नीचे क्लिक करें</h2>
 
       <form action="forms/notify.php" method="post" role="form" class="php-email-form">
         <div class="row no-gutters">
@@ -85,21 +85,26 @@
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
           <div class="col-md-6 form-group pl-md-1">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            <input type="Phone Number" class="form-control" name="Phone Number" id="Phone Number" placeholder="Your Phone Number" required>
           </div>
         </div>
+
 
         <div class="my-3">
           <div class="loading">Loading</div>
           <div class="error-message"></div>
           <div class="sent-message">Your notification request was sent. Thank you!</div>
         </div>
-        <div class="text-center"><button type="submit">Notify me!</button></div>
+        <div class="text-center"><button type="submit">BOOK NOW</button></div>
+        
       </form>
     </div>
+    
   </section><!-- #hero -->
-
   <main id="main">
+    <div id="calendar"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+  
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -110,14 +115,14 @@
             <img src="assets/img/about-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>जरूरतमंद को भोजन</h3>
+            <p class="fst-bold">
+              जन्मदिन, विवाह वर्षगांठ, बेटे-बेटी के विवाह का दिन, जलवा कार्यक्रम, आपकी कोई मानता हो, विशेष त्योहार पर, आपके परिवार के लिए कोई विशेष दिन आदि  खुशियों को राशन दान कर उनके साथ बांटिए, जिन्हे भोजन की वास्तव में जरूरत है।
+          
             </p>
             <ul>
-              <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bx bx-check-double"></i> आपके द्वारा दी जानेवाली भोजन-राशन-सहयोग राशि जिसमे आपका स्नेह मिला हुआ होगा, न जाने कितनों को भोजन के रूप में तृप्ति देगा।.</li>
+              <li><i class="bx bx-check-double"></i> हम साथ मिलकर व सभी के सहयोग से इस सेवा भाव को अनवरत चलाए रखने हेतु ,आपसे सहयोग की अपील करते है ...</li>
               <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
             </ul>
             <p>
@@ -128,6 +133,7 @@
           </div>
         </div>
 
+        
       </div>
     </section><!-- End About Section -->
 
@@ -260,7 +266,9 @@
             <div class="info">
               <div class="address">
                 <i class="bx bx-map"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>मानव सेवा
+                  मंगला चौक के पास
+                  <br>बस स्टैंड रोड, बिलासपुर 495001</p>
               </div>
 
               <div class="email">
@@ -270,7 +278,7 @@
 
               <div class="phone">
                 <i class="bx bx-phone-call"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>9827107281</p>
               </div>
             </div>
 
