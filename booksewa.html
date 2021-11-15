@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    </head>
+ <script>
+     $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please enter your First Name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please enter your Last Name'
+                    }
+                }
+            },
+			 user_name: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please enter your Username'
+                    }
+                }
+            },
+			 user_password: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please enter your Password'
+                    }
+                }
+            },
+			confirm_password: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please confirm your Password'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your Email Address'
+                    },
+                    emailAddress: {
+                        message: 'Please enter a valid Email Address'
+                    }
+                }
+            },
+            contact_no: {
+                validators: {
+                  stringLength: {
+                        min: 12, 
+                        max: 12,
+                    notEmpty: {
+                        message: 'Please enter your Contact No.'
+                     }
+                }
+            },
+			 department: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your Department/Office'
+                    }
+                }
+            },
+                }
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+
+ </script>
+<body>
+    
+    <div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend><center><h2><b>Book Sewa</b></h2></center></legend><br>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="name" placeholder="Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label">Phone Number</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input  name="phonenumber" placeholder="Phone Number" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input  name="address" placeholder="Address" class="form-control"  type="text">
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="form-group"> 
+  <label class="col-md-4 control-label">Select Menu</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="Menu" class="form-control selectpicker">
+      <option value="">Select Menu</option>
+      <option>चावल एवं सब्जी  - 3500/</option>
+      <option>पूरी,चावल एवं सब्जी  -11000/</option>
+      <option >एक मीठा, पूरी,चावल एवं सब्जी- 15000/</option>
+      <option >दो मीठा, पूरी, चावल एवं सब्जी- 21000/ </option>
+    </select>
+  </div>
+</div>
+</div>
+
+
+<div class="form-group"> 
+    <label class="col-md-4 control-label">Pay to</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <select name="payto" class="form-control selectpicker">
+        <option value=""></option>
+        <option>CAआनंद अग्रवाल - चाटापारा</option>
+        <option>CA सुरेंद्र अग्रवाल - श्रीकांत वर्मा मार्ग </option>
+        <option >दीपक मोदी - संजय अपार्टमेंट,व्यापार विहार रोड</option>
+        <option >अजय अग्रवाल  LIC कोटावाले - 1St floor ,Mohra Building,जूनिलाईन</option>
+        <option>विष्णु मुरारका - श्री शारदा इटरप्राइएजेज ,गोलबाजार</option>
+        <option>CA सचेन्द्र जैन - जैन प्लाजा, CMD चौक</option>
+        <option >CA प्रिंस मल्होत्रा - लिंक रोड</option>
+        <option >गणेश मोदी (पप्पू) - मोदी प्रॉविजन ,गायत्री मंदिर रोड़,विनोबा नगर</option>
+        <option>संदीप अग्रवाल - श्री कामर्शियल, कुबेर प्लाजा,मगरपारा</option>
+        <option>बजरंग मित्तल - शिला पार्क, राजकिशोर नगर</option>
+        <option >CA अंशुमान जाजोदिया - मध्यनगरी चौक</option>
+        <option >अनिल अग्रवाल (गुड़ाखु वाले)</option>
+        <option >भूपेंद्र बंसल जी रायपुर, अशोक विहार कालोनी, गली न.- 5, पंडरी
+            रायपुर</option>
+        
+      </select>
+    </div>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Confirm Sewa <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+    </body>
+</html>
