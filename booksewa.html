@@ -7,7 +7,14 @@
 
 
     </head>
- <script>
+ <script> 
+function CheckColors(val){
+             var element=document.getElementById('color');
+             if(val=='others')
+               element.style.display='block';
+             else  
+               element.style.display='none';
+            }
      $(document).ready(function() {
     $('#contact_form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -184,17 +191,23 @@
         <label class="col-md-4 control-label">PURPOSE</label>
           <div class="col-md-4 selectContainer">
           <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-          <select name="Menu" class="form-control selectpicker">
-            <option value=""></option>
-            <option>जन्मदिन</option>
-            <option >शादी की सालगिरह</option>
-            <option>सवामणि</option>
-            <option >पुण्यतिथि/बरसी</option>
+            <select name="color" onchange='CheckColors(this.value);'> 
+            <option> Pick a Purpose</option>
+            <option value="जन्मदिन">जन्मदिन</option>
+            <option value="शादी की सालगिरह">शादी की सालगिरह</option>
+            <option value="सवामणि">सवामणि</option>
+            <option value="पुण्यतिथि/बरसी">पुण्यतिथि/बरसी</option>
+            <option value="others">others</option><br>
+            </br>
           </select>
+          <input type="text" name="color" id="color" style='display:none;'/>
+          
         </div>
       </div>
       </div>
+  
+
+    
 
 
   <div class="form-group"> 
@@ -209,6 +222,7 @@
       <option>पूरी,चावल एवं सब्जी  -11000/</option>
       <option >एक मीठा, पूरी,चावल एवं सब्जी- 15000/</option>
       <option >दो मीठा, पूरी, चावल एवं सब्जी- 21000/ </option>
+
     </select>
   </div>
 </div>
@@ -222,19 +236,26 @@
           <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
       <select name="payto" class="form-control selectpicker">
         <option value=""></option>
-        <option>CAआनंद अग्रवाल - बिलासपुर - 9425219442ा</option>
-        <option>CA सुरेंद्र अग्रवाल - बिलासपुर - 9425220251 </option>
-        <option >दीपक मोदी - बिलासपुर - 9826517676</option>
-        <option >अजय अग्रवाल  LIC कोटावाले - बिलासपुर</option>
-        <option>विष्णु मुरारका - बिलासपुर -  9893021647</option>
-        <option>CA सचेन्द्र जैन - बिलासपुर - 9644530249</option>
-        <option >CA प्रिंस मल्होत्रा - बिलासपुर - 8109800048</option>
-        <option >गणेश मोदी (पप्पू) -  बिलासपुर - 9827168864</option>
-        <option>संदीप अग्रवाल -ाबिलासपुर - 9827924200</option>
-        <option>बजरंग मित्तल - बिलासपुर -  9179533475</option>
-        <option >CA अंशुमान जाजोदिया - बिलासपुर - 9827107281</option>
+        <option>CAआनंद अग्रवाल - तिलकनगर चाटापारा बिलासपुर - 9425219442ा</option>
+        <option>CA सुरेंद्र अग्रवाल - श्रीकांत वर्मा मार्ग  बिलासपुर - 9425220251 </option>
+        <option >दीपक मोदी - पी 2, संजय अपार्टमेंट व्यापार विहार रोड बिलासपुर - 9826517676</option>
+        <option >अजय अग्रवाल -Mohra Building 
+            जूनिलाईन बिलासपुर</option>
+        <option>विष्णु मुरारका - श्री शारदा इटरप्राइएजेज
+            गोलबाजार बिलासपुर -  9893021647</option>
+        <option>CA सचेन्द्र जैन - जैन प्लाजा, CMD चौक
+             बिलासपुर - 9644530249</option>
+        <option >CA प्रिंस मल्होत्रा - लिंक रोड बिलासपुर - 8109800048</option>
+        <option >गणेश मोदी -मोदी प्रॉविजन
+            गायत्री मंदिर रोड़,विनोबा नगर बिलासपुर - 9827168864</option>
+        <option>संदीप अग्रवाल -श्री कामर्शियल, कुबेर प्लाजा
+            मगरपारा बिलासपुर - 9827924200</option>
+        <option>बजरंग मित्तल -शिला पार्क, राजकिशोर नगर
+            बिलासपुर -  9179533475</option>
+        <option >CA अंशुमान जाजोदिया - मध्यनगरी चौक बिलासपुर - 9827107281</option>
         <option >अनिल अग्रवाल (गुड़ाखु वाले)- बिलासपुर - 9826528900</option>
-        <option >भूपेंद्र बंसल जी रायपुर - बिलासपुर - 9340678243</option>
+        <option >भूपेंद्र बंसल - अशोक विहार कालोनी पंडरी
+            रायपुर - 9340678243</option>
         
       </select>
     </div>
