@@ -38,7 +38,7 @@
     <div class="container-fluid">
 
       <div class="logo">
-        <h1><a href="index.html"><b> मानव सेवा </b></a></h1>
+        <h1><a href="index.html">मानव सेवा</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -49,7 +49,7 @@
           <li class="active"><a href="#header" class="scrollto">Home</a></li>
           <li><a href="#about" class="scrollto">About Us</a></li>
           <li><a href="#why-us" class="scrollto">Why Us</a></li>
-     
+          <li><a href="login form.html" class="goto">Login</a></li>
         </ul>
              
           <li><a href="#contact" class="scrollto">Contact Us</a></li>
@@ -61,7 +61,25 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-   
+    <div class="hero-container">
+      <H1>मानव सेवा में आपका स्वागत है</H1>
+      <br>
+      <H2><b>जरूरतमंद को भोजन पानी.... नि: शुल्क </b> </H2>
+
+      <h3>गरीब/वृद्ध/असहाय/भिक्षु एवं यात्रियों के लिए दोपहर में भोजन</h3>
+      <br>
+      <H4>कृपया, बुकिंग के लिए नीचे क्लिक करें</H4>
+      <BR>
+      
+
+      <button class="btn btn-warning" >
+        <a href="evo-calendar.php" class="goto">Select Sewa Slot</a>
+      </button>
+
+
+
+       
+    </div>
     
   </section><!-- #hero -->
   <main id="main">
@@ -190,7 +208,23 @@
             </div>
           </li>
 
-          
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li>
 
         </ul>
 
@@ -203,7 +237,6 @@
 
         <div class="section-title">
           <h2>Contact Us</h2>
-          <h4>for Any Query</h4>
         </div>
 
         <div class="row justify-content-center">
@@ -224,8 +257,15 @@
 
               <div class="phone">
                 <i class="bx bx-phone-call"></i>
-                <p>9425219442</p>
+                <p>9827107281</p>
               </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
 
           </div>
